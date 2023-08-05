@@ -1,0 +1,50 @@
+# https://pre-commit.com/#usage
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: f71fa2c1f9cf5cb705f73dffe4b21f7c61470ba9 # frozen: v4.4.0
+    hooks:
+      - id: check-ast
+      - id: check-toml
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: a7b43f63524fa3d7d91db7c9ef67986c50a54829 # frozen: 0.13.0
+    hooks:
+      - id: pyproject-fmt
+
+  - repo: https://github.com/psf/black
+    rev: 193ee766ca496871f93621d6b58d57a6564ff81b # frozen: 23.7.0
+    hooks:
+      - id: black
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: ade96e24aa3fa43c9d9b50d6cccae93d82765f40 # frozen: v0.0.282
+    hooks:
+      - id: ruff
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: 39f806769667765a1d55ea736d62bb8f72993e01 # frozen: v3.0.1
+    hooks:
+      - id: prettier
+        # .git/COMMIT_EDITMSG: commitizen needs to read this file
+        # TODO
+        # CHANGELOG.md: release-please autocreates this file, prettier would mess with it
+        # docs/cli.md: prettier would destroy the required indentation
+        exclude: >
+          (?x)^(
+            ^\.git/COMMIT_EDITMSG$|
+            ^CHANGELOG\.md$|
+            ^docs/cli\.md$|
+          )$
+
+  - repo: https://github.com/FHPythonUtils/LicenseCheck/
+    rev: 0fb4c3849b7de5d6fd3cbb3dd26317e57a738814 # frozen: 2023.3
+    hooks:
+      - id: licensecheck
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: 04acac4ebe9d708ce4e824e90a6f6e94d49f122a # frozen: 3.6.0
+    hooks:
+      - id: commitizen

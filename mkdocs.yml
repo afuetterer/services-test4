@@ -1,0 +1,36 @@
+site_name: services-test2
+site_description: services-test2
+repo_name: afuetterer/services-test2
+repo_url: https://github.com/afuetterer/services-test2
+watch: [README.md, src/services_test2]
+
+nav:
+  - Home: index.md
+  - Usage: cli.md
+  - Reference: reference/
+  - Changelog: changelog.md
+  - License: license.md
+
+theme:
+  name: material
+  features:
+    - content.code.annotate
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+  - include-markdown
+  - gen-files:
+      scripts:
+        - docs/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
+
+markdown_extensions:
+  - admonition
+  - mkdocs-click
