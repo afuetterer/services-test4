@@ -202,6 +202,7 @@ logging_use_named_masks = true
 major_on_zero = false
 tag_format = "{version}"
 version_toml = ["pyproject.toml:project.version"]
+build_command = "hatch build"
 
 [tool.semantic_release.changelog]
 exclude_commit_patterns = [
