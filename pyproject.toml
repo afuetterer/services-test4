@@ -206,17 +206,10 @@ build_command = "hatch build"
 
 [tool.semantic_release.changelog]
 exclude_commit_patterns = [
-  "chore:",
   "build:",
+  "chore:",
 ]
 
 [tool.semantic_release.commit_author]
 env = "GIT_COMMIT_AUTHOR"
 default = "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
-
-[tool.semantic_release.commit_parser_options]
-allowed_tags = [
-  "feat",
-  "fix",
-  "test",
-]
