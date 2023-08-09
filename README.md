@@ -1,13 +1,11 @@
 # services-test4
 
-|             |                                                                                                                                                                                                                  |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **CI**      | [![ci][ci-badge]][ci] coverage                                                                                                                                                                                   |
-| **Docs**    | docs passing + Link + mkdocs                                                                                                                                                                                     |
-| **Package** | [![pypi][test-pypi-version-badge]][test-pypi-project] + python versions + downloads                                                                                                                              |
-| **Meta**    | [![hatch][hatch-badge]][hatch] [![pre-commit enabled][pre-commit-badge]][pre-commit] [![ruff][ruff-badge]][ruff] [![black][black-badge]][black] [![mypy][mypy-badge]][mypy] [![license][license-badge]][license] |
-
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+|         |                                                                                                                                                                                                                                                                                              |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CI      | [![ci][ci-badge]][ci-workflow] + coverage                                                                                                                                                                                                                                                    |
+| Docs    | [![docs][docs-badge]][docs-workflow] + Link + mkdocs                                                                                                                                                                                                                                         |
+| Package | [![pypi][test-pypi-version-badge]][test-pypi-project] + python versions + downloads                                                                                                                                                                                                          |
+| Meta    | [![license][license-badge]][license] [![hatch][hatch-badge]][hatch] [![pre-commit enabled][pre-commit-badge]][pre-commit] [![ruff][ruff-badge]][ruff] [![black][black-badge]][black] [![mypy][mypy-badge]][mypy] [![conventional-commits][conventional-commits-badge]][conventional-commits] |
 
 ---
 
@@ -37,11 +35,13 @@ pip install services-test4
 <!-- Markdown links -->
 <!-- dynamic -->
 
-[ci]: https://github.com/afuetterer/services-test4/actions/workflows/ci.yml
+[ci-workflow]: https://github.com/afuetterer/services-test4/actions/workflows/ci.yml
 [ci-badge]: https://github.com/afuetterer/services-test4/actions/workflows/ci.yml/badge.svg
 [coverage]: https://github.com/afuetterer/services-test4/actions/workflows/ci.yml
 [coverage-badge]: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/afuetterer/d1275cebbce1b40b7d576a24f972fde0/raw/coverage-badge.json
-[docs]: https://afuetterer.github.io/services-test4
+[docs-url]: https://afuetterer.github.io/services-test4
+[docs-workflow]: https://github.com/afuetterer/services-test4/actions/workflows/docs.yml
+[docs-badge]: https://github.com/afuetterer/services-test4/actions/workflows/docs.yml/badge.svg
 [license-badge]: https://img.shields.io/github/license/afuetterer/services-test4
 [test-pypi-project]: https://test.pypi.org/project/services-test4/
 [test-pypi-version-badge]: https://img.shields.io/pypi/v/services-test2.svg?logo=pypi&label=PyPI&logoColor=gold
@@ -63,3 +63,5 @@ pip install services-test4
 [ruff-badge]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json
 [test-pypi]: https://test.pypi.org/
 [pip]: https://pip.pypa.io/
+[conventional-commits]: https://conventionalcommits.org
+[conventional-commits-badge]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white
