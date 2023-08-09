@@ -22,10 +22,10 @@ Python 3.8+
 
 ## Installation
 
-You can install services-test4 via pip from Test PyPI:
+You can install services-test4 via [pip](pip) from [Test PyPI](test-pypi):
 
 ```console
-pip install services-test4
+pip install --index-url=https://test.pypi.org/simple --extra-index-url=https://pypi.org/simple services-test4
 ```
 
 ## License
