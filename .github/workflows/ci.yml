@@ -28,6 +28,10 @@ jobs:
         python-version: ["3.11", "3.8"]
 
     steps:
+      - uses: step-security/harden-runner@cba0d00b1fc9a034e1e642ea0f1103c282990604 # v2.5.0
+        with:
+          egress-policy: audit
+
       - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
 
       - name: Set up Python ${{ matrix.python-version }}
@@ -64,7 +68,6 @@ jobs:
 
     # job: combine coverage
     # add coverage report
-    # job: all green
 
   # credit:
   # https://hynek.me/articles/python-github-actions/
@@ -96,6 +99,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: step-security/harden-runner@cba0d00b1fc9a034e1e642ea0f1103c282990604 # v2.5.0
+        with:
+          egress-policy: audit
+
       - name: Decide whether the needed jobs succeeded or failed
         uses: re-actors/alls-green@release/v1
         with:

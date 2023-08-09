@@ -46,6 +46,9 @@ jobs:
       - name: Install hatch
         run: pip install --upgrade hatch
 
+      # TODO: replace version in CITATION.cff
+      # export VERSION=$(semantic-release version --print)
+
       - name: Create semantic release
         run: hatch run release:version
         env:
