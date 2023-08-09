@@ -55,8 +55,48 @@ jobs:
       - name: Run tests
         run: hatch run cov
 
+      # - name: Upload coverage data
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: coverage-data
+      #     path: .coverage.*
+      #     if-no-files-found: ignore
+
     # job: combine coverage
-
     # add coverage report
-
     # job: all green
+
+  # credit:
+  # https://hynek.me/articles/python-github-actions/
+  # https://github.com/hynek/structlog/blob/main/.github/workflows/ci.yml (MIT License)
+  # install-dev:
+  #   name: Verify dev env
+  #   runs-on: ${{ matrix.os }}
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu-latest, windows-latest, macos-latest]
+
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-python@v4
+  #       with:
+  #         python-version: "3.11"
+  #         cache: pip
+
+  #     - run: python -Im pip install -e .[dev]
+  #     - run: python -Ic 'import services_test4; print(services_test4.__version__)'
+
+  # credit:
+  # https://github.com/hynek/structlog/blob/main/.github/workflows/ci.yml (MIT License)
+  required-checks-pass:
+    if: always()
+    needs:
+      - tests
+      # - install-dev
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@release/v1
+        with:
+          jobs: ${{ toJSON(needs) }}
