@@ -8,11 +8,13 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 
 
 
+## 0.1.0 (2023-08-09)
+
+### Breaking
+
+* feat!: make cli optional ([`5a48609`](https://github.com/afuetterer/services-test4/commit/5a48609246002ef39458418e25965f95b15a6890))
+
 ## 0.0.1 (2023-08-09)
-
-### Documentation
-
-* docs: improve documentation setup ([`6744db5`](https://github.com/afuetterer/services-test4/commit/6744db5beaff755274ba57f9f2509c0e8f90a30f))
 
 ### Fix
 
