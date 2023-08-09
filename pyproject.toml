@@ -54,6 +54,7 @@ packages = ["src/services_test4"]
 
 [tool.hatch.envs.default]
 dependencies = [
+  "services-test4[cli]",
   "pytest",
   "pytest-cov",
   "pytest-mock",
