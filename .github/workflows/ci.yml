@@ -57,6 +57,7 @@ jobs:
         with:
           path: ~/.cache/pre-commit
           key: pre-commit-${{ matrix.python-version }}-${{ hashFiles('.pre-commit-config.yaml') }}
+        if: matrix.python-version == '3.11'
 
       - name: Run linters
         run: hatch run lint:all
