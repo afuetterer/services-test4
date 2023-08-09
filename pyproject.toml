@@ -75,9 +75,7 @@ extra-dependencies = [
   "mypy",
 ]
 [tool.hatch.envs.lint.scripts]
-style = [
-  "pre-commit run --all-files --color=always",
-]
+style = "pre-commit run --all-files --color=always"
 typing = "mypy src tests"
 all = [
   "style",
@@ -85,12 +83,22 @@ all = [
 ]
 
 [tool.hatch.envs.docs]
-detached = true
+# detached = true
 dependencies = [
-  # TODO: pin?
   "mkdocs>=1.4",
+  "mkdocstrings[python]>=0.20",
+  "mkdocs-click>=0.8",
+  "mkdocs-include-markdown-plugin>=5.1",
+  "mkdocs-gen-files>=0.5",
+  "mkdocs-literate-nav>=0.6",
   "mkdocs-material>=9.1",
+  "mkdocs-section-index>=0.3",
 ]
+
+[tool.hatch.envs.docs.scripts]
+build = "mkdocs build --verbose"
+serve = "mkdocs serve --verbose"
+deploy = "mkdocs gh-deploy --force --verbose"
 
 [tool.hatch.envs.release]
 detached = true

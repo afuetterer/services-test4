@@ -1,13 +1,17 @@
-site_name: services-test2
-site_description: services-test2
-repo_name: afuetterer/services-test2
-repo_url: https://github.com/afuetterer/services-test2
-watch: [README.md, src/services_test2]
+# mkdocs
+# https://www.mkdocs.org/user-guide/configuration/
+# ------------------------------------------------------------------------------
+
+site_name: services-test4
+site_description: services-test4
+repo_name: afuetterer/services-test4
+repo_url: https://github.com/afuetterer/services-test4
+watch: [README.md, src/services_test4]
 
 nav:
   - Home: index.md
-  - Usage: cli.md
-  - Reference: reference/
+  # - Usage: cli.md
+  # - Reference: reference/
   - Changelog: changelog.md
   - License: license.md
 
@@ -18,11 +22,11 @@ theme:
 
 plugins:
   - search
-  - mkdocstrings:
-      handlers:
-        python:
-          options:
-            docstring_style: google
+  # - mkdocstrings:
+  #     handlers:
+  #       python:
+  #         options:
+  #           docstring_style: google
   - include-markdown
   - gen-files:
       scripts:
