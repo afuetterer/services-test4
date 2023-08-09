@@ -27,13 +27,6 @@ jobs:
       && ${{ github.event.workflow_run.conclusion == 'success' }}
     name: Build Python package
     runs-on: ubuntu-22.04
-    concurrency: release
-
-    # permissions:
-    #   id-token: write
-    #   contents: write
-
-    # https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/github-actions.html
 
     steps:
       - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
@@ -53,18 +46,7 @@ jobs:
       - name: Install hatch
         run: pip install --upgrade hatch
 
-      - name: Build package
-        run: hatch build
-
-      - name: Create release
+      - name: Create semantic release
         run: hatch run release:version
         env:
           GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
-
-      # TODO: token etc.
-      # hatch build?
-
-      # - name: Python Semantic Release
-      #   uses: python-semantic-release/python-semantic-release@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
