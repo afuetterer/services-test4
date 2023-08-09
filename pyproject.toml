@@ -25,6 +25,9 @@ classifiers = [
 ]
 dependencies = [
   "httpx>=0.24.1",
+]
+[project.optional-dependencies]
+cli = [
   "typer[all]>=0.9",
 ]
 [project.urls]
@@ -49,7 +52,6 @@ packages = ["src/services_test4"]
 
 [tool.hatch.envs.default]
 dependencies = [
-  # TODO: pin?
   "pytest",
   "pytest-cov",
   "pytest-mock",
@@ -70,7 +72,6 @@ cov = [
 
 [tool.hatch.envs.lint]
 extra-dependencies = [
-  # TODO: pin?
   "pre-commit",
   "mypy",
 ]
@@ -83,7 +84,7 @@ all = [
 ]
 
 [tool.hatch.envs.docs]
-# detached = true
+detached = true
 dependencies = [
   "mkdocs>=1.4",
   "mkdocstrings[python]>=0.20",
@@ -106,9 +107,8 @@ dependencies = [
   "python-semantic-release>=8.0",
 ]
 [tool.hatch.envs.release.scripts]
-version = [
-  "semantic-release -vv  --strict version",
-]
+version = "semantic-release -vv version"
+# TODO: --strict
 
 # black
 # https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
@@ -222,6 +222,8 @@ exclude_commit_patterns = [
   "^build",
   "^chore",
   "^ci",
+  "^docs",
+  "^style",
 ]
 
 [tool.semantic_release.commit_author]
