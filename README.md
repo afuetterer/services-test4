@@ -18,7 +18,7 @@ This repository is used to test services and configurations. Nothing to see here
 
 ## Requirements
 
-Python 3.8+
+[Python](https://www.python.org/downloads/) `3.8+`
 
 ## Installation
 
