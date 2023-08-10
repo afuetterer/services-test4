@@ -210,17 +210,15 @@ format = "ansi"
 # ------------------------------------------------------------------------------
 
 [tool.semantic_release]
-build_command = "hatch build"
+# build_command = "hatch build"
 commit_message = "chore: release {version}\n\n[skip ci]"
 logging_use_named_masks = true
 major_on_zero = false
 tag_format = "{version}"
 version_toml = ["pyproject.toml:project.version"]
-# version_variable = [
-#     "CITATION.cff:version",
-# ]
 
 [tool.semantic_release.changelog]
+template_dir = ".github/templates"
 exclude_commit_patterns = [
   "^build",
   "^chore",

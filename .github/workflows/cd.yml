@@ -22,6 +22,9 @@ permissions:
 jobs:
   release:
     # do not run in forks
+
+    # TODO: Remove brackets?
+
     if: >-
       github.repository == 'afuetterer/services-test4'
       && ${{ github.event.workflow_run.conclusion == 'success' }}
@@ -48,6 +51,8 @@ jobs:
 
       # TODO: replace version in CITATION.cff
       # export VERSION=$(semantic-release version --print)
+
+      # TODO: replace with github action?
 
       - name: Create semantic release
         run: hatch run release:version

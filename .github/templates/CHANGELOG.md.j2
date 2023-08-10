@@ -15,7 +15,6 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 {% else %}
 * {{ commit.commit.message.rstrip() }} ([`{{ commit.commit.hexsha[:7] }}`]({{ commit.commit.hexsha | commit_hash_url }}))
 {% endif %}{% endfor %}{% endfor %}
-
 {% endif %}
 
 {# RELEASED #}
@@ -27,4 +26,5 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 * {{ commit.commit.message.rstrip() }} ([`{{ commit.commit.hexsha[:7] }}`]({{ commit.commit.hexsha | commit_hash_url }}))
 {% else %}
 * {{ commit.commit.message.rstrip() }} ([`{{ commit.commit.hexsha[:7] }}`]({{ commit.commit.hexsha | commit_hash_url }}))
-{% endif %}{% endfor %}{% endfor %}{% endfor %}
+{% endif %}
+{% endfor %}{% endfor %}{% endfor %}
