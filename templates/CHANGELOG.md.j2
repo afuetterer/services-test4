@@ -5,7 +5,6 @@ All notable changes to this project will be documented in this file. This projec
 Available releases: <https://github.com/afuetterer/services-test4/releases>
 
 {% if context.history.unreleased | length > 0 %}
-
 {# UNRELEASED #}
 ## Unreleased
 {% for type_, commits in context.history.unreleased | dictsort %}
@@ -16,10 +15,15 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 * {{ commit.commit.message.rstrip() }} ([`{{ commit.commit.hexsha[:7] }}`]({{ commit.commit.hexsha | commit_hash_url }}))
 {% endif %}{% endfor %}{% endfor %}
 {% endif %}
-
 {# RELEASED #}
+{% set base_url = 'https://github.com/afuetterer/services-test4/compare/' %}
 {% for version, release in context.history.released.items() %}
+{% if loop.nextitem %}
+{% set compare_url = base_url ~ loop.nextitem[0] + '...' ~ version %}
+## [{{ version.as_tag() }}]({{ compare_url }}) ({{ release.tagged_date.strftime("%Y-%m-%d") }})
+{% else %}
 ## {{ version.as_tag() }} ({{ release.tagged_date.strftime("%Y-%m-%d") }})
+{% endif %}
 {% for type_, commits in release["elements"] | dictsort %}
 ### {{ type_ | capitalize }}
 {% for commit in commits %}{% if type_ != "unknown" %}
