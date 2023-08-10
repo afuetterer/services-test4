@@ -23,7 +23,7 @@ repos:
       - id: black
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: ade96e24aa3fa43c9d9b50d6cccae93d82765f40 # frozen: v0.0.282
+    rev: b9a5dc23ed421f99c0fe14b9ace2cbc7fbf710bd # frozen: v0.0.284
     hooks:
       - id: ruff
 
@@ -31,9 +31,8 @@ repos:
     rev: 39f806769667765a1d55ea736d62bb8f72993e01 # frozen: v3.0.1
     hooks:
       - id: prettier
-        # .git/COMMIT_EDITMSG: commitizen needs to read this file
-        # TODO
-        # CHANGELOG.md: release-please autocreates this file, prettier would mess with it
+        # .git/COMMIT_EDITMSG: conventional-pre-commit needs to read this file
+        # CHANGELOG.md: semantic-release autocreates this file, prettier would mess with it
         # docs/cli.md: prettier would destroy the required indentation
         exclude: >
           (?x)^(
@@ -47,7 +46,8 @@ repos:
     hooks:
       - id: licensecheck
 
-  - repo: https://github.com/commitizen-tools/commitizen
-    rev: 04acac4ebe9d708ce4e824e90a6f6e94d49f122a # frozen: 3.6.0
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: 7f91e1434e195a0121bc66bd50426f2140b5f862 # frozen: v2.3.0
     hooks:
-      - id: commitizen
+      - id: conventional-pre-commit
+        stages: [commit-msg]
