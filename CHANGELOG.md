@@ -10,6 +10,16 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 
 
 
+## [0.1.2](https://github.com/afuetterer/services-test4/compare/0.1.1...0.1.2) (2023-08-11)
+
+
+### Fix
+
+* fix: cd ([`42799d7`](https://github.com/afuetterer/services-test4/commit/42799d7b82a025533e51b319045e2f9a2c0bf0f7))
+
+
+
+
 ## [0.1.1](https://github.com/afuetterer/services-test4/compare/0.1.0...0.1.1) (2023-08-11)
 
 
