@@ -17,6 +17,9 @@ env:
   FORCE_COLOR: 1 # colored output by pytest etc.
   CLICOLOR_FORCE: 1 # colored output by ruff
 
+# Failed to save: reserveCache failed: connect ECONNREFUSED 54.185.253.63:443
+# Failed to restore: getCacheEntry failed: connect ECONNREFUSED 54.185.253.63:443
+
 permissions:
   contents: read
 
@@ -34,14 +37,16 @@ jobs:
         uses: step-security/harden-runner@cba0d00b1fc9a034e1e642ea0f1103c282990604 # v2.5.0
         with:
           disable-sudo: true
-          egress-policy: block
-          # TODO: find all needed endpoints
-          allowed-endpoints: >
-            api.github.com:443
-            files.pythonhosted.org:443
-            github.com:443
-            pypi.org:443
-            objects.githubusercontent.com:443
+          # disable-telemetry: true
+          egress-policy: audit
+          # egress-policy: block
+          # # TODO: find all needed endpoints
+          # allowed-endpoints: >
+          #   api.github.com:443
+          #   files.pythonhosted.org:443
+          #   github.com:443
+          #   pypi.org:443
+          #   objects.githubusercontent.com:443
 
       - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
 
