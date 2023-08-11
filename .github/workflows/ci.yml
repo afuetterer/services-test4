@@ -14,8 +14,8 @@ concurrency:
 
 env:
   PYTHONUNBUFFERED: 1
-  FORCE_COLOR: 1
-  CLICOLOR_FORCE: 1 # ruff
+  FORCE_COLOR: 1 # colored output by pytest etc.
+  CLICOLOR_FORCE: 1 # colored output by ruff
 
 permissions:
   contents: read

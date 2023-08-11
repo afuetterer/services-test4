@@ -4,9 +4,8 @@ on:
   release:
     types: [created]
 
-# https://docs.github.com/en/actions/using-jobs/using-concurrency
 concurrency:
-  group: docs-${{ github.head_ref }}
+  group: docs
   cancel-in-progress: true
 
 permissions:
@@ -40,6 +39,8 @@ jobs:
 
       - name: Build documentation
         run: hatch run docs:build
+
+      # upload docs, then download and run deploy?
 
       - name: Deploy documentation
         run: hatch run docs:deploy
