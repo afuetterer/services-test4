@@ -1,8 +1,20 @@
 # pre-commit
-# https://pre-commit.com/#usage
+# Ref: https://pre-commit.com/#usage
 # ------------------------------------------------------------------------------
 
+# Ref: https://pre-commit.com/#regular-expressions
+# CHANGELOG.md: semantic-release autocreates this file
+exclude: |
+  (?x)^(
+    CHANGELOG.md
+  )$
+
 repos:
+  # Ref: https://pre-commit.com/#meta-hooks
+  - repo: meta
+    hooks:
+      - id: check-hooks-apply
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: f71fa2c1f9cf5cb705f73dffe4b21f7c61470ba9 # frozen: v4.4.0
     hooks:
@@ -32,14 +44,7 @@ repos:
     hooks:
       - id: prettier
         # .git/COMMIT_EDITMSG: conventional-pre-commit needs to read this file
-        # CHANGELOG.md: semantic-release autocreates this file, prettier would mess with it
-        # docs/cli.md: prettier would destroy the required indentation
-        exclude: >
-          (?x)^(
-            ^\.git/COMMIT_EDITMSG$|
-            ^CHANGELOG\.md$|
-            ^docs/cli\.md$|
-          )$
+        exclude: .git/COMMIT_EDITMSG
 
   - repo: https://github.com/FHPythonUtils/LicenseCheck/
     rev: 0fb4c3849b7de5d6fd3cbb3dd26317e57a738814 # frozen: 2023.3
