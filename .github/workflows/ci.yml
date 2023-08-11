@@ -27,7 +27,7 @@ jobs:
   tests:
     name: Python ${{ matrix.python-version }}
     runs-on: ubuntu-22.04
-    timeout-minutes: 5
+    # timeout-minutes: 5
     strategy:
       matrix:
         python-version: ["3.8", "3.11", "3.12-dev"]
@@ -71,6 +71,7 @@ jobs:
 
       - name: Run linters
         run: hatch run lint:all
+        timeout-minutes: 5
         if: matrix.python-version == '3.11'
 
       - name: Run tests
