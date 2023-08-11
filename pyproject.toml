@@ -107,14 +107,6 @@ build = "mkdocs build --verbose"
 serve = "mkdocs serve --verbose"
 deploy = "mkdocs gh-deploy --force --verbose"
 
-# [tool.hatch.envs.release]
-# detached = true
-# dependencies = [
-#   "python-semantic-release>=8.0",
-# ]
-# [tool.hatch.envs.release.scripts]
-# version = "semantic-release -vv version"
-
 # black
 # https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
 # ------------------------------------------------------------------------------
@@ -220,7 +212,6 @@ tag_format = "{version}"
 version_toml = ["pyproject.toml:project.version"]
 
 [tool.semantic_release.changelog]
-# template_dir = ".github/templates"
 exclude_commit_patterns = [
   "^build",
   "^chore",
@@ -228,7 +219,3 @@ exclude_commit_patterns = [
   "^docs",
   "^style",
 ]
-
-[tool.semantic_release.commit_author]
-env = "GIT_COMMIT_AUTHOR"
-default = "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
