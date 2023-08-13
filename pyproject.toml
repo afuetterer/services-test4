@@ -49,7 +49,7 @@ requires = [
 packages = ["src/services_test4"]
 
 # hatch
-# https://hatch.pypa.io/latest/config/metadata/
+# Ref: https://hatch.pypa.io/latest/config/metadata/
 # ------------------------------------------------------------------------------
 
 [tool.hatch.envs.default]
@@ -108,7 +108,7 @@ serve = "mkdocs serve --verbose"
 deploy = "mkdocs gh-deploy --force --verbose"
 
 # black
-# https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
+# Ref: https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
 # ------------------------------------------------------------------------------
 
 [tool.black]
@@ -117,7 +117,7 @@ line-length = 120
 skip-string-normalization = true
 
 # ruff
-# https://beta.ruff.rs/docs/configuration/
+# Ref: https://beta.ruff.rs/docs/configuration/
 # ------------------------------------------------------------------------------
 
 [tool.ruff]
@@ -150,14 +150,14 @@ ban-relative-imports = "all"
 "tests/**/*" = ["PLR2004", "S101", "TID252"]
 
 # pytest
-# https://docs.pytest.org/en/stable/customize.html
+# Ref: https://docs.pytest.org/en/stable/customize.html
 # ------------------------------------------------------------------------------
 
 [tool.pytest.ini_options]
 testpaths = "tests"
 
 # coverage.py
-# https://coverage.readthedocs.io/en/latest/config.html
+# Ref: https://coverage.readthedocs.io/en/latest/config.html
 # ------------------------------------------------------------------------------
 
 [tool.coverage.run]
@@ -180,7 +180,7 @@ exclude_lines = [
 skip_empty = true
 
 # mypy
-# https://mypy.readthedocs.io/en/stable/config_file.html#using-a-pyproject-toml-file
+# Ref: https://mypy.readthedocs.io/en/stable/config_file.html#using-a-pyproject-toml-file
 # ------------------------------------------------------------------------------
 
 [tool.mypy]
@@ -192,7 +192,7 @@ show_error_codes = true
 show_error_context = true
 
 # licensecheck
-# https://github.com/FHPythonUtils/LicenseCheck/#example-1-pyprojecttoml
+# Ref: https://github.com/FHPythonUtils/LicenseCheck/#example-1-pyprojecttoml
 # ------------------------------------------------------------------------------
 
 [tool.licensecheck]
@@ -200,7 +200,7 @@ using = "PEP631"
 format = "ansi"
 
 # python-semantic-release
-# https://python-semantic-release.readthedocs.io/en/latest/configuration.html#settings
+# Ref: https://python-semantic-release.readthedocs.io/en/latest/configuration.html#settings
 # ------------------------------------------------------------------------------
 
 [tool.semantic_release]
