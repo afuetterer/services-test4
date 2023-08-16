@@ -10,7 +10,8 @@ license: MIT
 repository-code: https://github.com/afuetterer/services-test4
 date-released: 2023-08-06
 version: 0.0.0
-# TODO:
-# doi
-# identifiers
-# concept doi
+identifiers:
+  - type: doi
+    value: TODO
+    description: The concept DOI of this project.
+doi: TODO
