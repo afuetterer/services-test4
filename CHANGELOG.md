@@ -10,6 +10,24 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 
 
 
+## [0.1.3](https://github.com/afuetterer/services-test4/compare/0.1.2...0.1.3) (2023-08-16)
+
+
+### Fix
+
+* fix: add doi to citation.cff ([`61df633`](https://github.com/afuetterer/services-test4/commit/61df633e2950c8d92f32828f07e54580276b7ba0))
+
+
+### Test
+
+* test: downgrad dep to test dependabot pip settings ([`130381d`](https://github.com/afuetterer/services-test4/commit/130381d9e5a739d84e3c0af946f87d1202069d60))
+
+
+* test: downgrade dependencies to test dependabot ([`6104cc4`](https://github.com/afuetterer/services-test4/commit/6104cc494e5a71379bd104a2d385d4d99e13b518))
+
+
+
+
 ## [0.1.2](https://github.com/afuetterer/services-test4/compare/0.1.1...0.1.2) (2023-08-11)
 
 
