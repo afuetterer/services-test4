@@ -3,8 +3,8 @@
 |         |                                                                                                                                                                                                                                                                                              |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CI      | [![ci][ci-badge]][ci-workflow] + coverage                                                                                                                                                                                                                                                    |
-| Docs    | [![docs][docs-badge]][docs-workflow] + Link + mkdocs                                                                                                                                                                                                                                         |
-| Package | [![pypi][test-pypi-version-badge]][test-pypi-project] + python versions + downloads                                                                                                                                                                                                          |
+| Docs    | [![docs][docs-badge]][docs-workflow]                                                                                                                                                                                                                                                         |
+| Package | [![pypi][test-pypi-version-badge]][test-pypi-project] [![pypi downloads][test-pypi-downloads-badge]][test-pypi-project] [![pypi versions][test-pypi-python-versions-badge]][test-pypi-project]                                                                                               |
 | Meta    | [![license][license-badge]][license] [![hatch][hatch-badge]][hatch] [![pre-commit enabled][pre-commit-badge]][pre-commit] [![ruff][ruff-badge]][ruff] [![black][black-badge]][black] [![mypy][mypy-badge]][mypy] [![conventional-commits][conventional-commits-badge]][conventional-commits] |
 
 ---
@@ -47,6 +47,13 @@ pip install --index-url=https://test.pypi.org/simple --extra-index-url=https://p
 [test-pypi-version-badge]: https://img.shields.io/pypi/v/services-test2.svg?logo=pypi&label=PyPI&logoColor=gold
 [test-pypi-downloads-badge]: https://img.shields.io/pypi/dm/services-test2.svg?color=blue&label=Downloads&logo=pypi&logoColor=gold
 [test-pypi-python-versions-badge]: https://img.shields.io/pypi/pyversions/services-test2.svg?logo=python&label=Python&logoColor=gold
+
+| Package | [![PyPI - Version](https://img.shields.io/pypi/v/hatch.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/hatch/)
+
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/hatchling.svg?color=blue&label=Downloads&logo=pypi&logoColor=gold)](https://pypi.org/project/hatch/)
+
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hatch.svg?logo=python&label=Python&logoColor=gold)](https://pypi.org/project/hatch/) |
+| Meta |
 
 <!-- static -->
 
