@@ -1,4 +1,4 @@
-name: Pull request checks
+name: Checks
 
 on:
   pull_request:
@@ -59,6 +59,26 @@ jobs:
       - name: Run tests
         run: hatch run cov
 
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09 # v2.5.1
+        with:
+          egress-policy: audit
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+      - name: Set up Python 3.11
+        uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1 # v4.7.0
+        with:
+          python-version: "3.11"
+      - name: Set up pre-commit cache
+        uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
+        with:
+          path: ~/.cache/pre-commit
+          key: lint-${{ matrix.python-version }}-${{ hashFiles('.pre-commit-config.yaml') }}
+      - name: Run linters
+        run: hatch run lint:all
+
   docs:
     runs-on: ubuntu-22.04
     steps:
@@ -87,14 +107,16 @@ jobs:
   # Ref: https://github.com/hynek/structlog/blob/main/.github/workflows/ci.yml (MIT License)
   required-checks-pass:
     if: always()
-
     needs:
+      - lint
       - test
       - docs
-
     runs-on: ubuntu-22.04
-
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09 # v2.5.1
+        with:
+          egress-policy: audit
       - uses: re-actors/alls-green@05ac9388f0aebcb5727afa17fcccfecd6f8ec5fe # v1.2.2
         with:
           jobs: ${{ toJSON(needs) }}
