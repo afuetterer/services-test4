@@ -35,9 +35,9 @@ pip install --index-url=https://test.pypi.org/simple --extra-index-url=https://p
 <!-- Markdown links -->
 <!-- dynamic -->
 
-[ci-workflow]: https://github.com/afuetterer/services-test4/actions/workflows/ci.yml
-[ci-badge]: https://github.com/afuetterer/services-test4/actions/workflows/ci.yml/badge.svg
-[coverage]: https://github.com/afuetterer/services-test4/actions/workflows/ci.yml
+[ci-workflow]: https://github.com/afuetterer/services-test4/actions/workflows/main.yml
+[ci-badge]: https://github.com/afuetterer/services-test4/actions/workflows/main.yml/badge.svg
+[coverage]: https://github.com/afuetterer/services-test4/actions/workflows/main.yml
 [coverage-badge]: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/afuetterer/d1275cebbce1b40b7d576a24f972fde0/raw/coverage-badge.json
 [docs-url]: https://afuetterer.github.io/services-test4
 [docs-workflow]: https://github.com/afuetterer/services-test4/actions/workflows/docs.yml
