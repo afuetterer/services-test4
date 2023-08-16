@@ -26,11 +26,21 @@ classifiers = [
   "Typing :: Typed",
 ]
 dependencies = [
-  "httpx>=0.23",
+  "httpx>=0.24",
 ]
 [project.optional-dependencies]
 cli = [
-  "typer[all]>=0.8",
+  "typer[all]>=0.9",
+]
+docs = [
+  "mkdocs==1.5.2",
+  "mkdocs-click==0.8",
+  "mkdocs-gen-files==0.5",
+  "mkdocs-include-markdown-plugin==6",
+  "mkdocs-literate-nav==0.6",
+  "mkdocs-material==9.1.21",
+  "mkdocs-section-index==0.3.5",
+  "mkdocstrings[python]==0.20",
 ]
 [project.urls]
 Documentation = "https://github.com/afuetterer/services-test4#readme"
@@ -93,16 +103,7 @@ all = [
 
 [tool.hatch.envs.docs]
 detached = true
-dependencies = [
-  "mkdocs>=1.4",
-  "mkdocstrings[python]>=0.20",
-  "mkdocs-click>=0.8",
-  "mkdocs-include-markdown-plugin>=5.1",
-  "mkdocs-gen-files>=0.5",
-  "mkdocs-literate-nav>=0.6",
-  "mkdocs-material>=9.1",
-  "mkdocs-section-index>=0.3",
-]
+features = ["docs"]
 
 [tool.hatch.envs.docs.scripts]
 build = "mkdocs build --verbose"
