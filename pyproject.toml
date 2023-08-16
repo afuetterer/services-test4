@@ -102,7 +102,6 @@ all = [
 ]
 
 [tool.hatch.envs.docs]
-detached = true
 features = ["docs"]
 
 [tool.hatch.envs.docs.scripts]
