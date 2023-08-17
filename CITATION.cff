@@ -13,5 +13,5 @@ version: 0.0.0
 identifiers:
   - type: doi
     value: TODO
-    description: The concept DOI of this project.
+    description: The concept DOI for the collection containing all versions of this project.
 doi: TODO
