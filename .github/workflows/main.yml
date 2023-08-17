@@ -44,7 +44,7 @@ jobs:
         run: hatch run lint:all
 
   test:
-    uses: .github/workflows/test.yml
+    uses: ./.github/workflows/test.yml
 
   release:
     # do not run in forks
