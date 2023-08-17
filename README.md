@@ -48,13 +48,6 @@ pip install --index-url=https://test.pypi.org/simple --extra-index-url=https://p
 [test-pypi-downloads-badge]: https://img.shields.io/pypi/dm/services-test2.svg?color=blue&label=Downloads&logo=pypi&logoColor=gold
 [test-pypi-python-versions-badge]: https://img.shields.io/pypi/pyversions/services-test2.svg?logo=python&label=Python&logoColor=gold
 
-| Package | [![PyPI - Version](https://img.shields.io/pypi/v/hatch.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/hatch/)
-
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/hatchling.svg?color=blue&label=Downloads&logo=pypi&logoColor=gold)](https://pypi.org/project/hatch/)
-
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hatch.svg?logo=python&label=Python&logoColor=gold)](https://pypi.org/project/hatch/) |
-| Meta |
-
 <!-- static -->
 
 [license]: https://opensource.org/licenses/MIT
