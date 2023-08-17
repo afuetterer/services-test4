@@ -23,6 +23,8 @@ jobs:
     uses: ./.github/workflows/test.yml
 
   docs:
+    permissions:
+      contents: write
     uses: ./.github/workflows/docs.yml
 
   # TODO: coverage
