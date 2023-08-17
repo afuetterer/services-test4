@@ -6,7 +6,7 @@ on:
   workflow_call:
 
 concurrency:
-  group: docs
+  group: docs-${{ github.head_ref }}
   cancel-in-progress: true
 
 permissions:
