@@ -25,7 +25,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: a7b43f63524fa3d7d91db7c9ef67986c50a54829 # frozen: 0.13.0
+    rev: 8b471efae3d43e296d11e986d40fde050db4933e # frozen: 0.13.1
     hooks:
       - id: pyproject-fmt
 
@@ -35,12 +35,12 @@ repos:
       - id: black
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: b9a5dc23ed421f99c0fe14b9ace2cbc7fbf710bd # frozen: v0.0.284
+    rev: b9787ef94f0d06972b93b36730548f0d928f26f9 # frozen: v0.0.285
     hooks:
       - id: ruff
 
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: 39f806769667765a1d55ea736d62bb8f72993e01 # frozen: v3.0.1
+    rev: 672abe14d309fc28817d45b6be25ea976a92222a # frozen: v3.0.2
     hooks:
       - id: prettier
         # .git/COMMIT_EDITMSG: conventional-pre-commit needs to read this file
