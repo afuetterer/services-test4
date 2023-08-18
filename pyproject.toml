@@ -22,7 +22,6 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: Implementation :: CPython",
-  "Programming Language :: Python :: Implementation :: PyPy",
   "Typing :: Typed",
 ]
 dependencies = [
@@ -210,6 +209,10 @@ logging_use_named_masks = true
 major_on_zero = false
 tag_format = "{version}"
 version_toml = ["pyproject.toml:project.version"]
+build_command = """
+  python -m pip install build~=0.10.0
+  python -m build .
+"""
 
 [tool.semantic_release.changelog]
 exclude_commit_patterns = [
