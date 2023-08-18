@@ -1,0 +1,31 @@
+name: Publish
+
+on:
+  release:
+    types: [created]
+
+concurrency:
+  group: publish-${{ github.head_ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    # do not run in forks
+    if: github.repository == 'afuetterer/services-test4'
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09 # v2.5.1
+        with:
+          egress-policy: audit
+
+      - name: Publish package to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          verbose: true
+          user: ${{ secrets.PYPI_USERNAME }}
+          password: ${{ secrets.PYPI_PASSWORD }}
