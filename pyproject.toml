@@ -54,6 +54,12 @@ requires = [
   "hatchling",
 ]
 
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+  "/docs",
+]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/services_test4"]
 
@@ -210,8 +216,8 @@ major_on_zero = false
 tag_format = "{version}"
 version_toml = ["pyproject.toml:project.version"]
 build_command = """
-  python -m pip install build~=0.10.0
-  python -m build .
+  python -m pip install hatch
+  hatch build
 """
 
 [tool.semantic_release.changelog]
