@@ -10,6 +10,24 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 
 
 
+## [0.1.4](https://github.com/afuetterer/services-test4/compare/0.1.3...0.1.4) (2023-08-18)
+
+
+### Fix
+
+* fix: update pre-commit hooks ([`d8da8a1`](https://github.com/afuetterer/services-test4/commit/d8da8a1e4d6993d8f26981ca79e4638500eb8aae))
+
+
+### Test
+
+* test: harden runner ([`cf9fa71`](https://github.com/afuetterer/services-test4/commit/cf9fa71b7d7c7cb88b92717e3798e5848bc6bbe1))
+
+
+* test: downgrade dep to test pr ([`6e5e6f8`](https://github.com/afuetterer/services-test4/commit/6e5e6f85d05a5bba43b55cdd23d8e053317d51bc))
+
+
+
+
 ## [0.1.3](https://github.com/afuetterer/services-test4/compare/0.1.2...0.1.3) (2023-08-16)
 
 
