@@ -10,6 +10,18 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 
 
 
+
+## [0.2.0](https://github.com/afuetterer/services-test4/compare/0.1.4...0.2.0) (2023-09-28)
+
+
+### Feature
+
+* feat: cli ([`65c36a8`](https://github.com/afuetterer/services-test4/commit/65c36a89e88bb98b40732a6dcd1f12c94cd23404))
+
+
+
+
+
 ## [0.1.4](https://github.com/afuetterer/services-test4/compare/0.1.3...0.1.4) (2023-08-18)
 
 
@@ -24,6 +36,7 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 
 
 * test: downgrade dep to test pr ([`6e5e6f8`](https://github.com/afuetterer/services-test4/commit/6e5e6f85d05a5bba43b55cdd23d8e053317d51bc))
+
 
 
 
@@ -46,12 +59,14 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 
 
 
+
 ## [0.1.2](https://github.com/afuetterer/services-test4/compare/0.1.1...0.1.2) (2023-08-11)
 
 
 ### Fix
 
 * fix: cd ([`42799d7`](https://github.com/afuetterer/services-test4/commit/42799d7b82a025533e51b319045e2f9a2c0bf0f7))
+
 
 
 
@@ -66,12 +81,14 @@ Available releases: <https://github.com/afuetterer/services-test4/releases>
 
 
 
+
 ## [0.1.0](https://github.com/afuetterer/services-test4/compare/0.0.1...0.1.0) (2023-08-09)
 
 
 ### Breaking
 
 * feat!: make cli optional ([`5a48609`](https://github.com/afuetterer/services-test4/commit/5a48609246002ef39458418e25965f95b15a6890))
+
 
 
 
