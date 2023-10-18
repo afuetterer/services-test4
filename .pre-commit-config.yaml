@@ -39,13 +39,6 @@ repos:
     hooks:
       - id: ruff
 
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: fc260393cc4ec09f8fc0a5ba4437f481c8b55dc1  # frozen: v3.0.3
-    hooks:
-      - id: prettier
-        # .git/COMMIT_EDITMSG: conventional-pre-commit needs to read this file
-        exclude: .git/COMMIT_EDITMSG
-
   - repo: https://github.com/FHPythonUtils/LicenseCheck/
     rev: 15cc02a0c636c5e0caac505d6bfcfd70e17871e9  # frozen: 2023.5.1
     hooks:
