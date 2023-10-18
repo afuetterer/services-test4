@@ -38,7 +38,7 @@ docs = [
   "mkdocs-include-markdown-plugin==6.0.1",
   "mkdocs-literate-nav==0.6.1",
   "mkdocs-material==9.3.1",
-  "mkdocs-section-index==0.3.7",
+  "mkdocs-section-index==0.3.8",
   "mkdocstrings[python]==0.23",
 ]
 [project.urls]
