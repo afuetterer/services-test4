@@ -1,16 +1,18 @@
 # Ref: GitHub Action https://github.com/marketplace/actions/github-labeler.
 
-# Standard
-
-# good-first-issue
-# help-wanted
-- name: invalid
-  color: 7c3ea5
-- name: breaking
-  color: 7c3ea5
+# Default GitHub labels
 - name: duplicate
   description: This issue or pull request already exists 
-  color: 7c3ea5
+  color: cfd3d7
+- name: "good first issue"
+  description: Good for newcomers
+  color: 7057ff
+- name: "help wanted"
+  description: Extra attention is needed
+  color: 008672
+- name: invalid
+  description: This doesn't seem right
+  color: e4e669
 - name: wontfix
   description: This will not be worked on 
   color: ffffff
@@ -64,7 +66,7 @@
   color: 2b67c6
 - name: pre-commit
   description: Pull requests that update pre-commit config code
-  color: eb6420
+  color: fbca04
 - name: github-actions
   description: Pull requests that update GitHub Actions code
   color: "000000"
