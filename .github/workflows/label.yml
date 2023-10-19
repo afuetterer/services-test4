@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - .github/label.yml
-      - .github/workflows/labels.yml
+      - .github/labels.yml
+      - .github/workflows/label.yml
 
 permissions:
   contents: read
