@@ -2,11 +2,14 @@
 
 # Standard
 
+# help-wanted
+# wontfix
+
 # Status
 - name: "status: approved"
   color: 7c3ea5
 - name: "status: blocked"
-  color: 7c3ea5
+  color: e11d21
 - name: "status: inactive"
   color: 7c3ea5
 - name: "status: pending"
@@ -14,7 +17,7 @@
 
 # Type
 - name: "type: bug"
-  color: 7c3ea5
+  color: e11d21
 - name: "type: chore"
   color: 7c3ea5
 - name: "type: discussion"
@@ -26,7 +29,7 @@
 - name: "type: question"
   color: 7c3ea5
 - name: "type: security"
-  color: 7c3ea5
+  color: e11d21
 - name: "type: testing"
   color: 7c3ea5
 
@@ -39,3 +42,11 @@
   color: eb6420
 - name: "priority: critical"
   color: e11d21
+
+# dependabot
+
+# type: chore
+# dependencies
+# python
+# pre-commit
+# github-actions
