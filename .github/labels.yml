@@ -32,7 +32,7 @@
 
 # Priority
 - name: "priority: low"
-  color: 009800
+  color: "009800"
 - name: "priority: medium"
   color: fbca04
 - name: "priority: high"
