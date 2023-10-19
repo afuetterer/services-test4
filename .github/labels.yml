@@ -1,5 +1,7 @@
 # Ref: GitHub Action https://github.com/marketplace/actions/github-labeler.
 
+# Standard
+
 # Status
 - name: "status: approved"
   color: 7c3ea5
@@ -30,10 +32,10 @@
 
 # Priority
 - name: "priority: low"
-  color: 7c3ea5
+  color: 009800
 - name: "priority: medium"
-  color: 7c3ea5
+  color: fbca04
 - name: "priority: high"
-  color: 7c3ea5
+  color: eb6420
 - name: "priority: critical"
-  color: 7c3ea5
+  color: e11d21
