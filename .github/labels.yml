@@ -18,23 +18,21 @@
   color: ffffff
 
 # Status
-- name: "status: approved"
-  color: 7c3ea5
-- name: "status: blocked"
-  color: e11d21
-- name: "status: inactive"
-  color: 7c3ea5
-- name: "status: pending"
-  color: 7c3ea5
 - name: "status: abandoned"
   color: "000000"
+- name: "status: accepted"
+  color: "009800"
+- name: "status: blocked"
+  color: e11d21
+- name: "status: pending"
+  color: 7c3ea5
 
 # Type
 - name: "type: bug"
   description: Something isn't working
   color: e11d21
 - name: "type: chore"
-  color: 7c3ea5
+  color: cfd3d7
 - name: "type: discussion"
   color: 7c3ea5
 - name: "type: docs"
@@ -42,7 +40,7 @@
   color: 7c3ea5
 - name: "type: feature"
   description: New feature or request
-  color: 7c3ea5
+  color: "009800"
 - name: "type: question"
   color: 7c3ea5
 - name: "type: security"
