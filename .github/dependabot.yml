@@ -10,6 +10,9 @@ updates:
     commit-message:
       prefix: chore(deps-dev)
     open-pull-requests-limit: 10
+    labels:
+    - "type: chore"
+    - "deps: github-actions"
   - package-ecosystem: pip
     directory: /
     schedule:
@@ -18,3 +21,6 @@ updates:
       prefix: chore
       include: scope
     open-pull-requests-limit: 10
+    labels:
+    - "type: chore"
+    - "deps: python"
