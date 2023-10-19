@@ -8,8 +8,13 @@ on:
       - .github/labels.yml
       - .github/workflows/labels.yml
 
+permissions:
+  contents: read
+
 jobs:
   labeler:
+    permissions:
+      issues: write
     runs-on: ubuntu-22.04
     steps:
       - name: Check out the repository
