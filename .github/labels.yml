@@ -1,4 +1,12 @@
 # Ref: GitHub Action https://github.com/marketplace/actions/github-labeler.
-- name: "Status: Blocked"
+
+# Status
+- name: "status: blocked"
   description: blocked
   color: 7c3ea5
+
+# Type
+- name: "type: chore"
+  color: 7c3ea5
+
+# Priority
