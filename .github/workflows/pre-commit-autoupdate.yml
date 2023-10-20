@@ -34,8 +34,9 @@ jobs:
 
       # prepare message for pr body
       - run: grep "updating" autoupdate.log > updates.log
-      - run: echo "# Proposed changes\n\nBumps the pre-commit config with the following updates:\n" > pr-body.md
+      - run: echo -e "# Proposed changes\n\nBumps the pre-commit config with the following updates:\n" > pr-body.md
       - run: cat updates.log >> pr-body.md
+      - run: echo -e "\nThis PR is auto-generated once a month." >> pr-body.md
       - run: more pr-body.md
 
       # Ref: https://github.com/peter-evans/create-pull-request
@@ -50,8 +51,6 @@ jobs:
           commit-message: "build(deps-dev): update pre-commit hooks"
           add-paths: .pre-commit-config.yaml
           body-path: pr-body.md
-          # body: |
-#            This PR is auto-generated once a month at midnight of the first day of the month.
           labels: |
             type: build
             deps: pre-commit
@@ -61,6 +60,4 @@ jobs:
         run: |
           cat updates.log >> $GITHUB_STEP_SUMMARY
 
-      # TODO: set to body
-      # TODO: set to summary
-      # TODO: select files
+      # TODO: set to summary (.md)
