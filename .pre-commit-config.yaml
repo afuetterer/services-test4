@@ -16,7 +16,7 @@ repos:
       - id: check-hooks-apply
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: f71fa2c1f9cf5cb705f73dffe4b21f7c61470ba9 # frozen: v4.4.0
+    rev: c4a0b883114b00d8d76b479c820ce7950211c99b  # frozen: v4.5.0
     hooks:
       - id: check-ast
       - id: check-toml
@@ -25,34 +25,27 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: 8b471efae3d43e296d11e986d40fde050db4933e # frozen: 0.13.1
+    rev: 753f84434c360a0ef86ca8401331a1b1ff491e61  # frozen: 1.2.0
     hooks:
       - id: pyproject-fmt
 
   - repo: https://github.com/psf/black
-    rev: 193ee766ca496871f93621d6b58d57a6564ff81b # frozen: 23.7.0
+    rev: 9edba85f71d50d12996ef7bda576426362016171  # frozen: 23.10.0
     hooks:
       - id: black
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: b9787ef94f0d06972b93b36730548f0d928f26f9 # frozen: v0.0.285
+    rev: 382100c524aa3fa39218d6262f0cbf02dffae4db  # frozen: v0.1.0
     hooks:
       - id: ruff
 
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: 672abe14d309fc28817d45b6be25ea976a92222a # frozen: v3.0.2
-    hooks:
-      - id: prettier
-        # .git/COMMIT_EDITMSG: conventional-pre-commit needs to read this file
-        exclude: .git/COMMIT_EDITMSG
-
   - repo: https://github.com/FHPythonUtils/LicenseCheck/
-    rev: 0fb4c3849b7de5d6fd3cbb3dd26317e57a738814 # frozen: 2023.3
+    rev: 15cc02a0c636c5e0caac505d6bfcfd70e17871e9  # frozen: 2023.5.1
     hooks:
       - id: licensecheck
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: 7f91e1434e195a0121bc66bd50426f2140b5f862 # frozen: v2.3.0
+    rev: 09c004511d352e92003e76c8152dafd200c314e3  # frozen: v2.4.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
