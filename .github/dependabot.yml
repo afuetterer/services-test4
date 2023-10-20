@@ -14,8 +14,8 @@ updates:
     - "type: ci"
     - "deps: github-actions"
     groups:
-    github-actions:
-      patterns:
+      github-actions:
+        patterns:
         - "*"
 
   - package-ecosystem: pip
