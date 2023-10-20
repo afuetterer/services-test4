@@ -8,13 +8,19 @@ updates:
     schedule:
       interval: monthly
     commit-message:
-      prefix: chore(deps-dev)
+      prefix: ci
     open-pull-requests-limit: 10
+    labels:
+    - "type: ci"
+    - "deps: github-actions"
   - package-ecosystem: pip
     directory: /
     schedule:
       interval: monthly
     commit-message:
-      prefix: chore(deps)
+      prefix: build
       include: scope
     open-pull-requests-limit: 10
+    labels:
+    - "type: build"
+    - "deps: python"
