@@ -29,7 +29,7 @@
 - name: "status: blocked"
   color: e11d21
 - name: "status: pending"
-  color: 7c3ea5 # TODO hellblau?
+  color: c5def5
 
 # Type
 - name: "type: bug"
@@ -37,7 +37,7 @@
   color: e11d21
 - name: "type: build"
   description: Changes that affect the build system or external dependencies
-  color: cfd3d7 # TODO
+  color: d4c5f9
 - name: "type: ci"
   description: Continuous Integration
   color: "000000"
@@ -46,22 +46,22 @@
   color: cfd3d7
 - name: "type: docs"
   description: Improvements or additions to documentation
-  color: "0075ca"
+  color: 0075ca
 - name: "type: feature"
   description: New feature or request
   color: "009800"
 - name: "type: performance"
   description: Changes that improve performance
-  color: "009800" # TODO
+  color: 8fc9e1
 - name: "type: refactor"
   description: Changes that neither fix a bug nor adds a feature
-  color: "009800" # TODO
+  color: 326770
 - name: "type: style"
   description: Changes that do not affect the meaning of the code (e.g. white-space, formatting)
-  color: e11d21 # TODO
+  color: d59d75
 - name: "type: test"
   description: Adding missing tests or correcting existing tests
-  color: 7c3ea5 # TODO blau?
+  color: 1b3081
 
 # Priority
 - name: "priority: low"
