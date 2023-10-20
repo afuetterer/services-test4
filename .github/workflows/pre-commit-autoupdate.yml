@@ -47,9 +47,10 @@ jobs:
           body: |
             This PR is auto-generated once a month at midnight of the first day of the month.
           labels: |
-            "type: build"
-            "deps: pre-commit"
+            type: build
+            deps: pre-commit
           delete-branch: true
 
       # TODO: set to body
       # TODO: set to summary
+      # TODO: select files

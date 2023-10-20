@@ -99,3 +99,6 @@ cython_debug/
 
 # ruff
 .ruff_cache
+
+# log files
+*.log
