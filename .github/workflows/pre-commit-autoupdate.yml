@@ -1,0 +1,51 @@
+# This CI job is adapted from:
+# Cookiecutter Django (2013-10-17), BSD-3-Clause license
+# Ref: https://github.com/cookiecutter/cookiecutter-django/blob/2023.10.17/.github/workflows/pre-commit-autoupdate.yml
+
+name: Pre-commit auto-update
+
+on:
+  schedule:
+    # run once a month at midnight of the first day of the month
+    - cron: 0 0 1 * *
+  # run manually from actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  auto-update:
+    # Disables this workflow from running in a repository that is not part of the indicated organization/user
+    if: github.repository_owner == 'afuetterer'
+    permissions:
+      contents: write # for peter-evans/create-pull-request to create branch
+      pull-requests: write # for peter-evans/create-pull-request to create a PR
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install pre-commit
+      - run: pre-commit autoupdate --freeze
+      # Ref: https://github.com/peter-evans/create-pull-request
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: pre-commit-autoupdate
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          title: "chore(deps-dev): update pre-commit hooks"
+          commit-message: "chore(deps-dev): update pre-commit hooks"
+          body: |
+            Update pre-commit hooks
+
+            This PR is auto-generated once a month at midnight of the first day of the month.
+          labels: |
+            dependencies
+            pre-commit
+          delete-branch: true
