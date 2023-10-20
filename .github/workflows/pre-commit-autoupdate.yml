@@ -31,8 +31,12 @@ jobs:
           cache: pip
       - run: python -m pip install pre-commit
       - run: pre-commit autoupdate --freeze > autoupdate.log
+
+      # prepare message for pr body
       - run: grep "updating" autoupdate.log > updates.log
-      - run: more updates.log
+      - run: echo "# Proposed changes\n\nBumps the pre-commit config with the following updates:\n" > pr-body.md
+      - run: cat updates.log >> pr-body.md
+      - run: more pr-body.md
 
       # Ref: https://github.com/peter-evans/create-pull-request
       - name: Create pull request
@@ -44,12 +48,18 @@ jobs:
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           title: "build(deps-dev): update pre-commit hooks"
           commit-message: "build(deps-dev): update pre-commit hooks"
-          body: |
-            This PR is auto-generated once a month at midnight of the first day of the month.
+          add-paths: .pre-commit-config.yaml
+          body-path: pr-body.md
+          # body: |
+#            This PR is auto-generated once a month at midnight of the first day of the month.
           labels: |
             type: build
             deps: pre-commit
           delete-branch: true
+
+      - name: Write to Job Summary
+        run: |
+          cat updates.log >> $GITHUB_STEP_SUMMARY
 
       # TODO: set to body
       # TODO: set to summary
