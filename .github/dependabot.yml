@@ -13,6 +13,11 @@ updates:
     labels:
     - "type: ci"
     - "deps: github-actions"
+    groups:
+    github-actions:
+      patterns:
+        - "*"
+
   - package-ecosystem: pip
     directory: /
     schedule:
