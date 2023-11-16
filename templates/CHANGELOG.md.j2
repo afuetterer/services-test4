@@ -15,8 +15,12 @@ https://github.com/{{ context.repo_owner }}/{{ context.repo_name }}/compare/{{ p
 
 {# RELEASED #}
 {% for version, release in context.history.released.items() if "unknown" not in release["elements"] or release["elements"]|length > 1 -%}
-{%- set prev_version = loop.nextitem[0] -%}
-{%- set compare_url = version_compare_url(prev_version, version) -%}
+{% if loop.nextitem %}
+{%- set prev_version = loop.nextitem[0] %}
+{%- set compare_url = version_compare_url(prev_version, version) %}
 ## [{{ version.as_tag() }}]({{ compare_url }}) ({{ release.tagged_date.strftime("%Y-%m-%d") }})
+{% else %}
+## {{ version.as_tag() }} ({{ release.tagged_date.strftime("%Y-%m-%d") }})
+{% endif %}
 {% include ".changes.j2" %}
 {% endfor -%}
