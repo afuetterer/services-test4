@@ -40,7 +40,7 @@ docs = [
   "mkdocs-literate-nav==0.6.1",
   "mkdocs-material==9.3.1",
   "mkdocs-section-index==0.3.7",
-  "mkdocstrings[python]==0.23",
+  "mkdocstrings[python]==0.24.0",
 ]
 [project.urls]
 Documentation = "https://github.com/afuetterer/services-test4#readme"
