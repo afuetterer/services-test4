@@ -13,6 +13,5 @@ def hello_world(msg: str) -> str:
         An uppercase version of the input message.
 
     """
-    result = msg.capitalize()
     result = msg.upper()
     return result
