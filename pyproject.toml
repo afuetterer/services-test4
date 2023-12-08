@@ -36,7 +36,7 @@ docs = [
   "mkdocs==1.5.2",
   "mkdocs-click==0.8",
   "mkdocs-gen-files==0.5",
-  "mkdocs-include-markdown-plugin==6.0.3",
+  "mkdocs-include-markdown-plugin==6.0.4",
   "mkdocs-literate-nav==0.6.1",
   "mkdocs-material==9.3.1",
   "mkdocs-section-index==0.3.7",
