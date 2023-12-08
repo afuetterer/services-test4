@@ -44,7 +44,7 @@ jobs:
           git_committer_email: 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Publish package distributions to GitHub Releases
-        if: steps.semantic-release.outputs.released == 'true'
+        if: ${{ steps.semantic-release.outputs.released }} == 'true'
         uses: python-semantic-release/upload-to-gh-release@main
         with:
           github_token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
