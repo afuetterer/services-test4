@@ -6,7 +6,16 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
 
-## [Unreleased](https://github.com/afuetterer/services-test4/compare/0.4.0...main)
+## [Unreleased](https://github.com/afuetterer/services-test4/compare/0.5.0...main)
+
+
+
+## [0.5.0](https://github.com/afuetterer/services-test4/compare/0.4.0...0.5.0) (2023-12-08)
+
+
+### Features
+
+- add feature (#65) ([`b5d5079`](https://github.com/afuetterer/services-test4/commit/b5d5079f41e2d2ceccfc93c9ae48bda117952f2d))
 
 
 
@@ -20,6 +29,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Bug Fixes
 
 - changelog ([`35670c3`](https://github.com/afuetterer/services-test4/commit/35670c3c9ff0a393616c041362921f3f65848a74))
+
 
 
 ## [0.3.0](https://github.com/afuetterer/services-test4/compare/0.2.0...0.3.0) (2023-11-16)
@@ -39,6 +49,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - style ([`4bf0acd`](https://github.com/afuetterer/services-test4/commit/4bf0acdfd2a943bc91b9cf37281c86a7df01f5f2))
 
 
+
 ## [0.2.0](https://github.com/afuetterer/services-test4/compare/0.1.4...0.2.0) (2023-09-28)
 
 
@@ -49,6 +60,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Documentation
 
 - add macro to changelog template ([`9b8f0aa`](https://github.com/afuetterer/services-test4/commit/9b8f0aae3d6d70a2371149429f02343d50fe8551))
+
 
 
 ## [0.1.4](https://github.com/afuetterer/services-test4/compare/0.1.3...0.1.4) (2023-08-18)
@@ -67,6 +79,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - clean up readme ([`304551d`](https://github.com/afuetterer/services-test4/commit/304551d186a21d1ccc1f8101fdd05b9b6982744d))
 - update cff ([`426684c`](https://github.com/afuetterer/services-test4/commit/426684c312033fc3b2d071fcf93f9fa08183c46a))
+
 
 
 ## [0.1.3](https://github.com/afuetterer/services-test4/compare/0.1.2...0.1.3) (2023-08-16)
@@ -89,12 +102,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - update project links ([`f487481`](https://github.com/afuetterer/services-test4/commit/f4874819721c5f8ab54f6bc81a7ee58f753df1a1))
 
 
+
 ## [0.1.2](https://github.com/afuetterer/services-test4/compare/0.1.1...0.1.2) (2023-08-11)
 
 
 ### Bug Fixes
 
 - cd ([`42799d7`](https://github.com/afuetterer/services-test4/commit/42799d7b82a025533e51b319045e2f9a2c0bf0f7))
+
 
 
 ## [0.1.1](https://github.com/afuetterer/services-test4/compare/0.1.0...0.1.1) (2023-08-11)
@@ -107,6 +122,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Documentation
 
 - update readme ([`500c286`](https://github.com/afuetterer/services-test4/commit/500c28613820cab02f1ba38cd34628e7782269ae))
+
 
 
 ## [0.1.0](https://github.com/afuetterer/services-test4/compare/0.0.1...0.1.0) (2023-08-09)
@@ -123,6 +139,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - update readme ([`d5495ce`](https://github.com/afuetterer/services-test4/commit/d5495cee18c8b7e6d88377290c2aed22448c0a45))
 
 
+
 ## [0.0.1](https://github.com/afuetterer/services-test4/compare/0.0.0...0.0.1) (2023-08-09)
 
 
@@ -135,6 +152,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - improve documentation setup ([`6744db5`](https://github.com/afuetterer/services-test4/commit/6744db5beaff755274ba57f9f2509c0e8f90a30f))
 
 
+
 ## 0.0.0 (2023-08-09)
+
 
 
