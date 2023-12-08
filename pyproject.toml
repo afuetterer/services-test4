@@ -33,14 +33,21 @@ cli = [
   "typer[all]>=0.9",
 ]
 docs = [
-  "mkdocs==1.5.2",
-  "mkdocs-click==0.8",
-  "mkdocs-gen-files==0.5",
-  "mkdocs-include-markdown-plugin==6.0.3",
-  "mkdocs-literate-nav==0.6.1",
-  "mkdocs-material==9.3.1",
-  "mkdocs-section-index==0.3.7",
-  "mkdocstrings[python]==0.23",
+  "mkdocs~=1.5",
+  "mkdocs-click~=0.8",
+  "mkdocs-gen-files~=0.5",
+  "mkdocs-include-markdown-plugin~=6.0",
+  "mkdocs-literate-nav~=0.6.1",
+  "mkdocs-material~=9.5",
+  "mkdocs-section-index~=0.3.7",
+  "mkdocstrings[python]~=0.23",
+]
+test = [
+  "pytest~=7.4",
+  "pytest-cov~=4.1",
+  "pytest-mock~=3.11",
+  "pytest-randomly~=3.1",
+  "pytest-xdist~=3.3",
 ]
 [project.urls]
 Documentation = "https://github.com/afuetterer/services-test4#readme"
@@ -69,15 +76,9 @@ packages = ["src/services_test4"]
 # ------------------------------------------------------------------------------
 
 [tool.hatch.envs.default]
-dependencies = [
-  "pytest",
-  "pytest-cov",
-  "pytest-mock",
-  "pytest-randomly",
-  "pytest-xdist",
-]
 features = [
   "cli",
+  "test",
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"

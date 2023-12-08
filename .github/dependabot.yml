@@ -29,3 +29,10 @@ updates:
     labels:
     - "type: build"
     - "deps: python"
+    groups:
+      docs:
+        patterns:
+        - mkdocs*
+      test:
+        patterns:
+        - pytest*
