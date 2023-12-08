@@ -31,14 +31,6 @@ jobs:
       - lint
       - test
     steps:
-      - name: Harden Runner
-        uses: step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895 # v2.6.1
-        with:
-          disable-sudo: true
-          # disable-telemetry: true
-          egress-policy: audit
-          # allowed-endpoints: >
-          #   github.com:443
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 0
@@ -52,9 +44,8 @@ jobs:
           git_committer_email: 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Publish package distributions to GitHub Releases
-        id: github-release
         if: steps.semantic-release.outputs.released == 'true'
         uses: python-semantic-release/upload-to-gh-release@main
         with:
           github_token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
-          tag: ${{ steps.release.outputs.tag }}
+          root_options: -vv
