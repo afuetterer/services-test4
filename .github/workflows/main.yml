@@ -37,7 +37,7 @@ jobs:
           token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
       - name: Create semantic release
         id: semantic-release
-        uses: python-semantic-release/python-semantic-release@3a571d2622de93fab7844465db9c442846c8b78d # v8.5.0
+        uses: python-semantic-release/python-semantic-release@c1059f5b90895f75bde3d088bdc69e734e983535 # v8.7.0
         with:
           github_token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
           git_committer_name: github-actions[bot]
