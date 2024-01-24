@@ -83,13 +83,8 @@ features = [
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
 test-cov = "pytest --cov {args:tests}"
-# cov-report = [
-#   "- coverage combine",
-#   "coverage report",
-# ]
 cov = [
   "test-cov",
-  # "cov-report",
 ]
 ci = [
   "pytest --cov --numprocesses=auto --dist=loadscope",
@@ -115,6 +110,18 @@ features = ["docs"]
 build = "mkdocs build --verbose"
 serve = "mkdocs serve --verbose"
 deploy = "mkdocs gh-deploy --force --verbose"
+
+[tool.hatch.envs.release]
+dependencies = [
+  "python-semantic-release~=8.7"
+]
+
+[tool.hatch.envs.release.scripts]
+next-version = "semantic-release version --print"
+update-citation = """
+  sed -i "s/version: .*/version: $(semantic-release version --print)/" CITATION.cff
+  sed -i "s/date-released: .*/date-released: $(date "+%Y-%m-%d")/" CITATION.cff
+"""
 
 # black
 # Ref: https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
