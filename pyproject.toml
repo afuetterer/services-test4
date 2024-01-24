@@ -121,6 +121,7 @@ next-version = "semantic-release version --print"
 update-citation = """
   sed -i "s/version: .*/version: $(semantic-release version --print)/" CITATION.cff
   sed -i "s/date-released: .*/date-released: $(date "+%Y-%m-%d")/" CITATION.cff
+  cat CITATION.cff
 """
 
 # black
