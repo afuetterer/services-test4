@@ -35,10 +35,11 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
-      - run: pipx install hatch
-      - run: hatch run release:update-citation
-      - run: git add CITATION.cff
-
+      - name: Update version and date in CITATION.cff
+        run: |
+          pipx install hatch
+          hatch run release:update-citation
+          git add CITATION.cff
       - name: Create semantic release
         id: semantic-release
         uses: python-semantic-release/python-semantic-release@c1059f5b90895f75bde3d088bdc69e734e983535 # v8.7.0
