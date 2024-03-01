@@ -9,7 +9,7 @@ updates:
       interval: monthly
     commit-message:
       prefix: ci
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 0 # disables dependabot
     labels:
     - "type: ci"
     - "deps: github-actions"
@@ -25,7 +25,7 @@ updates:
     commit-message:
       prefix: build
       include: scope
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 0 # disables dependabot
     labels:
     - "type: build"
     - "deps: python"
