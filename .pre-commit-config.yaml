@@ -25,24 +25,24 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: 15ce99ba02863ca8df16ca727714e6c7de11f9a4  # frozen: 1.5.3
+    rev: d85599bf81598928f76a763653195e8b39df791e  # frozen: 1.7.0
     hooks:
       - id: pyproject-fmt
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 7bcc70ca475b87e0fdee2511300c74b25babe0b3  # frozen: v0.1.9
+    rev: 0dd3437ad984b107802b242c696edf2bd72676ee  # frozen: v0.3.0
     hooks:
     - id: ruff-format
     - id: ruff
       args: [--fix, --exit-non-zero-on-fix]
 
   - repo: https://github.com/FHPythonUtils/LicenseCheck/
-    rev: 0d58138937fb0c67733100935727a99ef8cd9bc5  # frozen: 2023.5.2
+    rev: 546b293801b0fec25f1974164a03a0428881ef39  # frozen: 2024
     hooks:
       - id: licensecheck
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: 09de2d8736611042feeff83688b5b5b35d459c7c  # frozen: v3.0.0
+    rev: cdffa5192782a992f5728a67482535b0b3bc42fa  # frozen: v3.1.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
