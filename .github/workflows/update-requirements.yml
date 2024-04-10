@@ -31,8 +31,8 @@ jobs:
           --upgrade
           --generate-hashes
           --python-version=3.10
-          --output-file=.github/workflows/requirements.txt
-          .github/workflows/requirements.in
+          --output-file=.github/requirements/ci.txt
+          .github/requirements/ci.in
 
       # Ref: https://github.com/peter-evans/create-pull-request
       - name: Create pull request
@@ -44,7 +44,7 @@ jobs:
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           title: "build(deps-dev): upgrade ci requirements"
           commit-message: "build(deps-dev): upgrade ci requirements"
-          add-paths: .github/workflows/requirements.txt
+          add-paths: .github/workflows/requirements/ci.txt
           labels: |
             type: build
             deps: python
