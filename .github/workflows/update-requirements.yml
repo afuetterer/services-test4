@@ -1,0 +1,32 @@
+# This CI job is adapted from:
+# build-and-inspect-python-package (2024-03-25), MIT license
+# Ref: https://github.com/hynek/build-and-inspect-python-package/blob/v2.2.1/.github/workflows/update-dependencies.yml
+
+name: Upgrade requirements
+
+on:
+  schedule:
+    # run once a month at midnight of the first day of the month
+    - cron: 0 0 1 * *
+  # run manually from actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  upgrade:
+    name: Upgrade & Open Pull Request
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+      - name: Upgrade Python dependencies
+        run: >
+          uv pip compile
+          --upgrade
+          --generate-hashes
+          --python-version=3.10
+          --output-file=.github/workflows/requirements.txt
+          .github/workflows/requirements.in
