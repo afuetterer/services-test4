@@ -49,3 +49,4 @@ jobs:
             type: build
             deps: python
           delete-branch: true
+          draft: true
