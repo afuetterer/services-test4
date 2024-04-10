@@ -44,6 +44,10 @@ jobs:
           author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           title: "build(deps-dev): upgrade ci requirements"
           commit-message: "build(deps-dev): upgrade ci requirements"
+          body: |
+            Monthly scheduled CI requirements upgrade (`uv pip compile --upgrade`).
+
+            Mark this PR as `ready for review` to trigger additional checks.
           add-paths: .github/requirements/ci.txt
           labels: |
             type: build
