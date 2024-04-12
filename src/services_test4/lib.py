@@ -15,4 +15,5 @@ def hello_world(msg: str) -> str:
     """
     result = msg.upper()
     print(msg)
+    print(msg)
     return result
