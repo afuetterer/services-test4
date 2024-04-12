@@ -5,7 +5,6 @@ https://mkdocstrings.github.io/recipes/
 https://github.com/mkdocstrings/mkdocstrings/blob/master/docs/gen_ref_nav.py
 """
 
-
 from pathlib import Path
 
 import mkdocs_gen_files
