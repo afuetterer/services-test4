@@ -47,7 +47,8 @@ jobs:
           body: |
             Monthly scheduled CI requirements upgrade (`uv pip compile --upgrade`).
 
-            Mark this PR as `ready for review` to trigger additional checks.
+            > [!NOTE]
+            > Mark this PR as "ready for review" to trigger additional checks.
           add-paths: .github/requirements/ci.txt
           labels: |
             type: build
