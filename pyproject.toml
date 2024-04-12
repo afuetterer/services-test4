@@ -227,8 +227,8 @@ major_on_zero = false
 tag_format = "{version}"
 version_toml = ["pyproject.toml:project.version"]
 build_command = """
-python -m pip install build
-python -m build
+python -m pip install build[uv]>=1.2.1
+python -m build --installer=uv
 """
 
 [tool.semantic_release.changelog]
