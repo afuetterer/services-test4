@@ -6,7 +6,21 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
 
-## [Unreleased](https://github.com/afuetterer/services-test4/compare/0.12.0...main)
+## [Unreleased](https://github.com/afuetterer/services-test4/compare/0.13.0...main)
+
+
+
+## [0.13.0](https://github.com/afuetterer/services-test4/compare/0.12.0...0.13.0) (2024-04-12)
+
+
+### Features
+
+- new print ([`eb0044e`](https://github.com/afuetterer/services-test4/commit/eb0044eda7b99ed6de92422f52e08cb4e78fb4d3))
+
+### Documentation
+
+- remove black badge ([`70c4220`](https://github.com/afuetterer/services-test4/commit/70c4220d03718209d8c0aa40a8648304b43f6f45))
+- add coc ([`57a09c1`](https://github.com/afuetterer/services-test4/commit/57a09c15ed4b3409224d3cf7a282fea2d54fa693))
 
 
 
