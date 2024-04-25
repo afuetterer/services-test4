@@ -4,6 +4,8 @@ on:
   release:
     types: [created]
   workflow_call:
+  # run manually from actions tab
+  workflow_dispatch:
 
 concurrency:
   group: docs-${{ github.head_ref }}
@@ -39,4 +41,4 @@ jobs:
         run: hatch run docs:build
       - name: Deploy documentation
         run: hatch run docs:deploy
-        if: github.event_name == 'release'
+        if: contains(fromJSON('["release", "workflow_dispatch"]'), github.event_name)
