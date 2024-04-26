@@ -110,7 +110,7 @@ features = ["docs"]
 [tool.hatch.envs.docs.scripts]
 build = "mkdocs build --verbose"
 serve = "mkdocs serve --verbose"
-deploy = "mike deploy $(hatch version)"
+deploy = "mike deploy --push --update-aliases $(hatch version) latest"
 
 [tool.hatch.envs.release]
 dependencies = [
