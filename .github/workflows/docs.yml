@@ -38,6 +38,7 @@ jobs:
       - run: hatch version
       - name: Build documentation
         run: hatch run docs:build
+      - run: echo github.event_name
       - name: Deploy documentation
         run: hatch run docs:deploy
         if: contains(fromJSON('["release", "workflow_dispatch"]'), github.event_name)
