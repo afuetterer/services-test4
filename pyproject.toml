@@ -33,6 +33,7 @@ cli = [
   "typer[all]>=0.9",
 ]
 docs = [
+  "mike~=2.0",
   "mkdocs~=1.5",
   "mkdocs-click~=0.8",
   "mkdocs-gen-files~=0.5",
@@ -109,7 +110,7 @@ features = ["docs"]
 [tool.hatch.envs.docs.scripts]
 build = "mkdocs build --verbose"
 serve = "mkdocs serve --verbose"
-deploy = "mkdocs gh-deploy --force --verbose"
+deploy = "mike deploy $(hatch version)"
 
 [tool.hatch.envs.release]
 dependencies = [
