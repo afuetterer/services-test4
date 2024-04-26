@@ -6,7 +6,16 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
 
-## [Unreleased](https://github.com/afuetterer/services-test4/compare/0.15.1...main)
+## [Unreleased](https://github.com/afuetterer/services-test4/compare/0.15.2...main)
+
+
+
+## [0.15.2](https://github.com/afuetterer/services-test4/compare/0.15.1...0.15.2) (2024-04-26)
+
+
+### Bug Fixes
+
+- env git committer ([`5108ac2`](https://github.com/afuetterer/services-test4/commit/5108ac23a64279e95620664d0cb75514637b39c0))
 
 
 
