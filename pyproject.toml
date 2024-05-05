@@ -113,19 +113,6 @@ build = "mkdocs build --verbose"
 serve = "mkdocs serve --verbose"
 deploy = "mike deploy --push --update-aliases $(hatch version) latest"
 
-[tool.hatch.envs.release]
-dependencies = [
-  "python-semantic-release~=8.7"
-]
-
-[tool.hatch.envs.release.scripts]
-next-version = "semantic-release version --print"
-update-citation = """
-  sed -i "s/version: .*/version: $(semantic-release version --print)/" CITATION.cff
-  sed -i "s/date-released: .*/date-released: $(date "+%Y-%m-%d")/" CITATION.cff
-  cat CITATION.cff
-"""
-
 # black
 # Ref: https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
 # ------------------------------------------------------------------------------
@@ -229,7 +216,10 @@ major_on_zero = false
 tag_format = "{version}"
 version_toml = ["pyproject.toml:project.version"]
 build_command = """
-python -m pip install build[uv]>=1.2.1
+sed -i "s/^version: .*/version: $NEW_VERSION/" CITATION.cff
+sed -i "s/^date-released: .*/date-released: $(date "+%Y-%m-%d")/" CITATION.cff
+git add CITATION.cff
+python -m pip install "build[uv]>=1.2.1"
 python -m build --installer=uv
 """
 
