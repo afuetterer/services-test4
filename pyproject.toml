@@ -222,9 +222,7 @@ git add CITATION.cff
 python -m pip install "build[uv]>=1.2.1"
 python -m build --installer=uv
 """
-
-[tool.semantic_release.changelog]
-template_dir = ".github/templates"
+changelog.template_dir = ".github/templates"
 
 [tool.semantic_release.changelog.environment]
 keep_trailing_newline = true
