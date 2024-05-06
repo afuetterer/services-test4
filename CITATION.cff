@@ -9,7 +9,7 @@ title: services-test4
 license: MIT
 repository-code: https://github.com/afuetterer/services-test4
 date-released: 2024-05-06
-version: 
+version: 0.18.0
 identifiers:
   - type: doi
     value: TODO
