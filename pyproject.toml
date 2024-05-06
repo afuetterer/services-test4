@@ -218,7 +218,7 @@ version_toml = ["pyproject.toml:project.version"]
 build_command = """
 sed -i "s/^version: .*/version: $NEW_VERSION/" CITATION.cff
 sed -i "s/^date-released: .*/date-released: $(date "+%Y-%m-%d")/" CITATION.cff
-git add CITATION.cff
+cat CITATION.cff
 python -m pip install "build[uv]>=1.2.1"
 python -m build --installer=uv
 """
