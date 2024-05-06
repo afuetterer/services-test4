@@ -1,6 +1,6 @@
 [project]
 name = "services-test4"
-version = "0.19.2"
+version = "0.19.3"
 description = "This repository is used to test services and configurations. Nothing to see here."
 readme = "README.md"
 keywords = [
