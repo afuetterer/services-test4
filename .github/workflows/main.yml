@@ -40,8 +40,8 @@ jobs:
         uses: python-semantic-release/python-semantic-release@6c41ec339e0e5d9802ec81f635de67f9fd940f53 # v9.7.1
         with:
           github_token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
-          git_committer_name: github-actions[bot]
-          git_committer_email: 41898282+github-actions[bot]@users.noreply.github.com
+          # git_committer_name: github-actions[bot]
+          # git_committer_email: 41898282+github-actions[bot]@users.noreply.github.com
           root_options: -vv
 
       - name: Publish package distributions to GitHub Releases
