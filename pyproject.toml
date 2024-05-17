@@ -36,11 +36,8 @@ docs = [
   "mike~=2.0",
   "mkdocs~=1.5",
   "mkdocs-click~=0.8",
-  "mkdocs-gen-files~=0.5",
   "mkdocs-include-markdown-plugin~=6.0",
-  "mkdocs-literate-nav~=0.6.1",
   "mkdocs-material~=9.5",
-  "mkdocs-section-index~=0.3.7",
   "mkdocstrings[python]~=0.23",
 ]
 test = [
