@@ -6,18 +6,20 @@ site_name: services-test4
 site_description: services-test4
 repo_name: afuetterer/services-test4
 repo_url: https://github.com/afuetterer/services-test4
-watch: [README.md, src/services_test4]
+docs_dir: src
+edit_uri: edit/main/docs/
+strict: true
+watch:
+- ../src
 
 nav:
   - Home: index.md
-  # - Usage: cli.md
-  # - Reference: reference/
   - Changelog: changelog.md
   - License: license.md
 
 theme:
   name: material
-  custom_dir: docs/overrides
+  custom_dir: src/overrides
   features:
     - content.code.annotate
 
@@ -29,12 +31,6 @@ plugins:
   #         options:
   #           docstring_style: google
   - include-markdown
-  - gen-files:
-      scripts:
-        - docs/gen_ref_pages.py
-  - literate-nav:
-      nav_file: SUMMARY.md
-  - section-index
 
 markdown_extensions:
   - admonition
