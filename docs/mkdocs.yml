@@ -4,6 +4,7 @@
 
 site_name: services-test4
 site_description: services-test4
+site_url: https://afuetterer.github.io/services-test4
 repo_name: afuetterer/services-test4
 repo_url: https://github.com/afuetterer/services-test4
 docs_dir: src
