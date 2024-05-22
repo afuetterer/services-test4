@@ -41,6 +41,8 @@ jobs:
         with:
           github_token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
 
+      - run: echo ${{ steps.semantic-release.outputs }}
+
       - name: Publish package distributions to GitHub Releases
         if: ${{ steps.semantic-release.outputs.released }} == 'true'
         uses: python-semantic-release/upload-to-gh-release@main
