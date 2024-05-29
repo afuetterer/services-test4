@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). See
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
-## [Unreleased](https://github.com/afuetterer/services-test4/compare/0.21.4...main)
+## [Unreleased](https://github.com/afuetterer/services-test4/compare/0.21.5...main)
+
+## [0.21.5](https://github.com/afuetterer/services-test4/compare/0.21.4...0.21.5) (2024-05-29)
+
+### Bug Fixes
+
+- ci ([`9514cf5`](https://github.com/afuetterer/services-test4/commit/9514cf5d1d4644218f8d3f9c51d6bc7c1a8ecc39))
 
 ## [0.21.4](https://github.com/afuetterer/services-test4/compare/0.21.3...0.21.4) (2024-05-29)
 
