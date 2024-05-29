@@ -18,8 +18,16 @@ updates:
         patterns:
         - "*"
 
+  # Ignore the files in /requirements
   - package-ecosystem: pip
-    directory: /pyproject.toml
+    directory: /requirements
+    schedule:
+      interval: monthly
+    ignore:
+      - dependency-name: "*"
+
+  - package-ecosystem: pip
+    directory: /
     schedule:
       interval: monthly
     commit-message:
