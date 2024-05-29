@@ -33,15 +33,15 @@ cli = [
   "typer[all]>=0.9",
 ]
 docs = [
-  "mike~=2.0",
+  "mike~=1.0",
   "mkdocs~=1.5",
   "mkdocs-click~=0.8",
   "mkdocs-include-markdown-plugin~=6.0",
-  "mkdocs-material~=9.5",
+  "mkdocs-material~=8.0",
   "mkdocstrings[python]~=0.23",
 ]
 test = [
-  "pytest~=8.0",
+  "pytest~=7.0",
   "pytest-cov~=4.1",
   "pytest-mock~=3.11",
   "pytest-randomly~=3.1",
