@@ -45,6 +45,7 @@ jobs:
     # do not run in forks
     if: github.repository_owner == 'afuetterer'
     runs-on: ubuntu-24.04
+    needs: build
     permissions:
       contents: read
       packages: write
