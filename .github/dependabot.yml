@@ -25,7 +25,7 @@ updates:
     commit-message:
       prefix: build
       include: scope
-    open-pull-requests-limit: 0 # disables dependabot
+    open-pull-requests-limit: 5 # 0 disables dependabot
     labels:
     - "type: build"
     - "deps: python"
