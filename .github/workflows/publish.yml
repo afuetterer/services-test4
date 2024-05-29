@@ -77,3 +77,5 @@ jobs:
         cache-to: type=gha,mode=max
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+        # Ref: https://docs.docker.com/build/attestations/slsa-provenance/
+        provenance: false
