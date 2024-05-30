@@ -18,14 +18,6 @@ updates:
         patterns:
         - "*"
 
-  # Ignore the files in /requirements
-  - package-ecosystem: pip
-    directory: /requirements
-    schedule:
-      interval: monthly
-    ignore:
-      - dependency-name: "*"
-
   - package-ecosystem: pip
     directory: /
     schedule:
