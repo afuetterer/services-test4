@@ -33,7 +33,7 @@ cli = [
   "typer[all]>=0.9",
 ]
 docs = [
-  "mike~=1.0",
+  "mike~=2.1",
   "mkdocs~=1.5",
   "mkdocs-click~=0.8",
   "mkdocs-include-markdown-plugin~=6.0",
