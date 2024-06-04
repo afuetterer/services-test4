@@ -2,9 +2,9 @@
 name: Close stale issues and PRs
 
 on:
-  schedule:
-    # run once a month at midnight of the first day of the month
-  - cron: 0 0 1 * *
+  # schedule:
+  #   # run once a month at midnight of the first day of the month
+  # - cron: 0 0 1 * *
   # run manually from actions tab
   workflow_dispatch:
 
