@@ -4,7 +4,6 @@
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CI      | [![ci][ci-badge]][ci-workflow] + coverage                                                                                                                                                                                                                                                    |
 | Docs    | [![docs][docs-badge]][docs-workflow]                                                                                                                                                                                                                                                         |
-| Package | [![pypi][test-pypi-version-badge]][test-pypi-project] [![pypi downloads][test-pypi-downloads-badge]][test-pypi-project] [![pypi versions][test-pypi-python-versions-badge]][test-pypi-project]                                                                                               |
 | Meta    | [![license][license-badge]][license] [![hatch][hatch-badge]][hatch] [![pre-commit enabled][pre-commit-badge]][pre-commit] [![ruff][ruff-badge]][ruff] [![mypy][mypy-badge]][mypy] [![conventional-commits][conventional-commits-badge]][conventional-commits] |
 
 ---
